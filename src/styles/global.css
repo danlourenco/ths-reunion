@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
 
-:root {
+@theme {
   --color-tiger-orange: #d77d1f;
   --color-tiger-light: #ef9f3f;
   --color-tiger-bright: #ffba63;
   --color-tiger-glow: rgba(255, 194, 110, 0.45);
-  --font-primary: "Oswald", sans-serif;
-  --font-secondary: "Oswald", sans-serif;
+  --font-racing: "Racing Sans One", sans-serif;
+}
+
+@utility text-glow {
+  text-shadow: 0 0 5px rgba(255, 194, 110, 0.25),
+    0 0 10px rgba(255, 194, 110, 0.15), 0 0 15px rgba(215, 125, 31, 0.12);
 }
 
 @keyframes fade-in {
