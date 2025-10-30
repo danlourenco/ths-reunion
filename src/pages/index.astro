@@ -1,5 +1,5 @@
 ---
-
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -8,9 +8,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>The Pack Reunites</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="h-full min-h-screen m-0 overflow-hidden bg-black text-(--color-tiger-orange) flex flex-col items-center justify-start relative pt-[18vh]" style="font-family: var(--font-primary);">
+		<!-- Background Video -->
+		<video 
+			autoplay 
+			muted 
+			loop 
+			playsinline 
+			class="fixed top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover brightness-55 z-0"
+		>
+			<source src="/tigers.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+
+		<!-- Main Title -->
+		<h1 class="relative text-center uppercase font-semibold z-10 animate-ember-title text-[clamp(2rem,5vw,4.5rem)] tracking-[0.25em] max-sm:tracking-[0.15em]">
+			The Pack Reunites
+			<span class="block opacity-95 text-[0.5em] tracking-[0.4em] max-sm:tracking-[0.3em] animate-ember-subtitle" style="font-family: var(--font-secondary); font-weight: 500;">
+				2026. Stay Tuned.
+			</span>
+		</h1>
 	</body>
 </html>

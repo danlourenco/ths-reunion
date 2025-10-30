@@ -1,1 +1,58 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;500&display=swap");
+
+:root {
+  --color-tiger-orange: #d77d1f;
+  --color-tiger-light: #ef9f3f;
+  --color-tiger-bright: #ffba63;
+  --color-tiger-glow: rgba(255, 194, 110, 0.45);
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Cormorant Garamond", serif;
+}
+
+@keyframes ember-title {
+  0%,
+  100% {
+    color: var(--color-tiger-orange);
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 28px rgba(0, 0, 0, 0.9),
+      0 0 60px rgba(0, 0, 0, 0.85);
+    filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.8));
+    opacity: 0.92;
+  }
+  45% {
+    color: var(--color-tiger-light);
+    text-shadow: 0 14px 34px rgba(0, 0, 0, 0.96), 0 0 32px rgba(0, 0, 0, 0.9),
+      0 0 70px rgba(0, 0, 0, 0.85), 0 0 26px rgba(255, 182, 94, 0.35);
+    filter: drop-shadow(0 23px 38px rgba(0, 0, 0, 0.78));
+    opacity: 0.98;
+  }
+  55% {
+    color: var(--color-tiger-bright);
+    text-shadow: 0 16px 40px rgba(0, 0, 0, 0.95), 0 0 36px rgba(0, 0, 0, 0.92),
+      0 0 85px rgba(0, 0, 0, 0.9), 0 0 34px var(--color-tiger-glow);
+    filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.82));
+    opacity: 1;
+  }
+}
+
+@keyframes ember-subtitle {
+  0%,
+  100% {
+    text-shadow: 0 8px 18px rgba(0, 0, 0, 0.9), 0 0 22px rgba(0, 0, 0, 0.85);
+    opacity: 0.9;
+  }
+  50% {
+    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.92), 0 0 28px rgba(0, 0, 0, 0.88),
+      0 0 18px rgba(255, 194, 110, 0.4);
+    opacity: 0.98;
+  }
+}
+
+.animate-ember-title {
+  animation: ember-title 7s ease-in-out infinite;
+}
+
+.animate-ember-subtitle {
+  animation: ember-subtitle 7s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
